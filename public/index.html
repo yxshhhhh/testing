@@ -1,0 +1,24 @@
+<head>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.6/axios.min.js"></script>
+<script>
+    function sendRequest() {
+        axios.post("http://localhost:3000/sum", {
+            a: document.getElementById("a").value,
+            b: document.getElementById("b").value
+        }) .then(response => {
+          console.log(response.data);
+        })
+    }
+</script>
+</head>
+
+<body>
+    <input id="a" type="number" placeholder="first value">
+    <input id="b" stype="number" placeholder="second value">
+
+    <button onclick="sendRequest()">send request</button>
+</body>
+
+
+<!-- to run the frontend  -->
+<!-- npx serve -->
